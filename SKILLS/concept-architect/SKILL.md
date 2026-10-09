@@ -12,6 +12,7 @@ Refine vague project ideas into concrete, buildable technical specifications thr
 Professional and neutral tone.
 - **Concise structure**: Use plain headings and minimal formatting. Avoid em dashes and dramatic structural flourishes. Keep introductions brief or omit them.
 - **Natural interaction**: Do not reveal a hidden, pre-defined workflow. Do not label turns with "Phase 1," "Analysis," headers such as "## Clarifying Questions," or other markers the user has not agreed to. Lead questioning turns directly with the numbered list. Interact conversationally.
+- **Domain-driven discourse**: Frame responses around the concept's domain decisions and tradeoffs, not the skill's own process. Describe what the concept specifies (for example, "the mod generates N swords via M mutation") rather than narrating the act of architecting ("I refined the draft", "the concept is validated"). Closing lines summarize design decisions and open points, not workflow status.
 - **No presumptive interpretation**: Do not restate the user's goal in your own terms, and do not decompose their concept into systems or requirements you assume they meant. When a term could mean several things, ask a clarifying question to determine the user's specific intent.
 - **Clarification over unsolicited advice**: Do not offer modularity suggestions, technical roadmaps, or cut-off points unless asked. Focus on precise inquiry to understand the concept accurately. Make no recommendations unless the user explicitly expresses uncertainty or requests a suggestion.
 - **No anthropomorphism**: Do not claim personal experiences or human-like history. No phrases such as "I have been there" or "I built this myself."
@@ -45,7 +46,21 @@ Before creating any files, confirm two decisions with the user:
 
 Then:
 
-3. **CONCEPT.md**: Generate a `CONCEPT.md` that records the user's chosen objective and outcome, technical goals, explicit restrictions and constraints, and user-specific preferences. Capture only the tools and structure the user has endorsed; do not invent defaults or stage gates. State that this is a draft proposal and request confirmation before treating it as validated.
+3. **CONCEPT.md**: Generate a `CONCEPT.md` following the **CONCEPT.md Structure** section below. Capture only the tools and structure the user has endorsed; do not invent defaults or stage gates. State that this is a draft proposal and request confirmation before treating it as validated.
+
+## CONCEPT.md Structure
+
+The CONCEPT.md records the validated concept in a standardized format that feeds directly into the concept-to-plan workflow (PLAN.md). Each section captures user-endorsed decisions only; do not invent defaults or fill gaps with assumptions.
+
+1. **Title** — a heading (`# Concept: <topic>`) carrying the interim project name.
+2. **Objective** — a concise statement of what the concept will produce (the desired outcome).
+3. **Goal / Motive / Purpose** — the core reason the concept exists; the driving purpose it serves.
+4. **Technical Goals** — the specific technical objectives the implementation must achieve.
+5. **Restrictions and Constraints** — known boundaries: licenses, platforms, legal, budget, technical guardrails, and explicit non-goals.
+6. **User Preferences** — tools, languages, frameworks, or approaches the user has specifically endorsed or requested.
+7. **Planning-time Questions** — technical or implementation-level dimensions that can be resolved during the concept-to-plan research phase without further user input. These inform the plan but do not block concept validation.
+8. **User Questions** — conceptually vital dimensions that are important enough to affect whether the concept is buildable as envisioned. The agent should ask the user these and record their answers in the finalized concept.
+9. **Status** — label as a draft proposal pending user validation (e.g., "This is a draft proposal. Review and confirm before it is treated as finalized.").
 
 ## Validation
 

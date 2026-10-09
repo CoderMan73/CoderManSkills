@@ -37,18 +37,20 @@ For each recurring flaw, posit a testable root cause (e.g., "missing execution-r
 
 ## Deliverable
 
-Present a structured report with exactly these three sections:
+1. **Post-mortem report** — run the six post-mortem steps as internal rationale.
+2. **Apply** — edit the reviewed skill's `SKILL.md` directly to enact the clear, additive refinements derived from the report. Do not gate on user confirmation.
+3. **Summarize** — concisely report what changed and why, as applied facts.
 
-### 1. Optimized system instructions
-Concrete, reworded instructions the skill should adopt. These are the "next version" of the skill's core rules — how to triage intent, when to ask vs. ground, how to propose.
+### Report structure (rationale for the applied changes)
+Keep the three-section structure as supporting analysis:
+- **Optimized system instructions**: reworded core rules for the skill's next version.
+- **Refined behavioral constraints**: tightened rules that close specific gaps found in friction points.
+- **Strategic frameworks**: a reusable decision/turn framework plus guardrail phrasing.
 
-### 2. Refined behavioral constraints
-Tightened rules derived from failures. Each must close a specific gap found in sections 4–5 (e.g., "Front-load intent triage"; "Scope context reconciliation to the same concept only"; "Resist execution drift: document and validate, never execute without explicit permission").
-
-### 3. Strategic frameworks
-A reusable decision/turn framework for future runs of the skill (e.g., Triage → Question → Ground(minimally) → Document(draft) → Validate → Execute-if-confirmed), plus guardrail phrasing the skill should use to stay on-mode.
-
-Optionally recommend applying the top 1–2 refinements to the skill's `SKILL.md`.
+### Execution rules
+- **Apply, don't ask**: when findings are clear and changes are additive, enact them directly in the reviewed skill's `SKILL.md`. Only surface — never gate — genuinely destructive or ambiguous changes.
+- **Walk your own talk**: improve-skill applies its own recommendations. If the post-mortem reveals the skill should apply directly rather than propose, it does so without waiting for confirmation.
+- **One-line summary per change**: report each edit as an applied fact, not a proposal awaiting approval.
 
 ## Tone
-Professional, neutral, and concise. Lead with findings; avoid lengthy narrative.
+Professional, neutral, and concise. Lead with findings as applied changes; avoid lengthy narrative.
