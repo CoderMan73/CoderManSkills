@@ -19,6 +19,10 @@ metadata:
       source: agents.md/
       local: references/agents-guide.md
       snapshotted: 2026-10-09T19:00:00Z
+    local-skills:
+      source: agentskills.io/specification
+      local: references/local-skills-guide.md
+      snapshotted: 2026-10-09T20:30:00Z
     gitignore:
       source: github.com/github/gitignore
       local: references/gitignore-guide.md
@@ -86,7 +90,7 @@ Focused, single-purpose: project initialization and scaffolding only. This skill
 
 10. **Generate SECURITY.md**: Link to `references/readme-guide.md` for security policy guidance. Document how to report vulnerabilities and supported versions.
 
-11. **Generate AGENTS.md**: Follow `references/agents-guide.md` for structure and best practices. Create the `ai-docs/` directory with an `ai-docs/README.md` explaining how to record field notes, architectural decisions, and lessons learned between agent sessions. Do not conflate `ai-docs/` with `docs/`.
+11. **Generate AGENTS.md**: Follow `references/agents-guide.md` for structure and best practices. Initialize `.agents/skills/` as an empty directory (with a `.gitkeep` file) for repo-local skills. Create the `ai-docs/` directory with an `ai-docs/README.md` explaining how to record field notes, architectural decisions, and lessons learned between agent sessions. Do not conflate `ai-docs/` with `docs/`.
 
 12. **Generate .gitignore**: Follow `references/gitignore-guide.md`. Use cached language templates in `references/templates/` when the project stack matches (e.g., `Python.gitignore`, `Rust.gitignore`).
 

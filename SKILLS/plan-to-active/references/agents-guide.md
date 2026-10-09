@@ -26,7 +26,8 @@ AGENTS.md is a simple, open format for guiding coding agents. Think of it as a "
    - **Never** - Hard prohibitions
 8. **Context Loading** - When to read which docs/skills
 9. **Gotchas** - Known pitfalls, surprising behavior, non-obvious constraints
-10. **ai-docs** - Instructions for the ai-docs/ subdirectory
+10. **Local Skills** - Repo-local skills folder: discovery paths, when to use them, when to suggest creating new ones
+11. **ai-docs** - Instructions for the ai-docs/ subdirectory
 
 ### Best Practices
 
@@ -119,6 +120,16 @@ The agent is a [specialist role] for [project purpose]. Prioritize [key prioriti
 ## Gotchas
 
 - [Surprising behaviors, footguns]
+
+## Local Skills
+
+This project may define repo-local skills in `.agents/skills/`. When starting a task, scan this folder for skills whose descriptions match the current work. If you encounter a recurring, repeatable process worth standardizing (e.g., release checklists, code review patterns), suggest encoding it as a local skill. Record one-off decisions and debugging notes in ai-docs/ instead.
+
+- **Discovery**: Check `.agents/skills/` at task start.
+- **When to use**: Any skill whose description matches the task at hand.
+- **When to suggest**: Recurring, repeatable processes worth standardizing.
+- **When NOT to suggest**: One-off decisions, single-use observations, ad-hoc debugging (use ai-docs/ instead).
+- **Structure**: Each skill is a folder with a `SKILL.md` (frontmatter + instructions) plus optional `scripts/` and `references/`.
 
 ## ai-docs
 
